@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Expand onclick</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="panel " style="background-image: url('images/WhatsApp\ Image\ 2024-04-02\ at\ 20.19.05_bb2db052.jpg');">
+            <h3>Images 1</h3>
+        </div>
+        <div class="panel active" style="background-image: url('images/WhatsApp\ Image\ 2024-04-02\ at\ 20.19.06_d453320c.jpg');">
+            <h3>Images 2</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/WhatsApp\ Image\ 2024-04-02\ at\ 20.19.08_710e012f.jpg');">
+            <h3>Images 3</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/WhatsApp\ Image\ 2024-04-02\ at\ 20.19.06_d453320c.jpg');">
+            <h3>Images 4</h3>
+        </div>
+        <div class="panel" style="background-image: url('images/WhatsApp\ Image\ 2024-04-02\ at\ 20.19.05_bb2db052.jpg');">
+            <h3>Images 5</h3>
+        </div>
+    </div>
+
+    <script>
+        const panel = document.querySelectorAll('.panel');
+        panel.forEach((element) => {
+            element.addEventListener('click',function(){
+                removeActiveClass();
+                element.classList.add('active');
+            });
+        });
+        function removeActiveClass(){
+            panel.forEach((element1) => {
+                element1.classList.remove('active');
+            });
+        }
+
+    </script>
+</body>
+</html>
